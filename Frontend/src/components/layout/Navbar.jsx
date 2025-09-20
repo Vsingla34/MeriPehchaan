@@ -286,7 +286,7 @@ const Header = () => {
                       className="
                       text-emerald-500 hover:scale-[1.5] cursor-pointer hover:border-b-2 border-emerald-500  "
                     >
-                       {user.user.fullname.split(' ')[0]}
+                       {user.user.fullname.split(' ')[0] }
                     </span>
                   </NavLink>
                 </span>
