@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+*{
+    @apply box-border
+}
+
+html,body{
+    @apply overflow-x-hidden 
+}
+
+
+@media(width<1177px){
+    .navmenu {
+        left: 23%
+    }
+
+    .navmenu > a{
+        font-size: 10px;
+    }
+    .teambox {
+        font-size: 10px;
+    }
+
+}
+
+
+@media(width<1026px){
+    .mobmenu {
+        position: absolute;
+        left: 20%;
+    }
+
+    .mainlogo {
+        font-size: 1rem;
+    }
+
+    .navbtn{
+        font-size: 10px;
+    }
+
+}
+
