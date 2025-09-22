@@ -46,7 +46,7 @@ html,body{
     .fb-box {
         flex-direction: column;
         gap: 1rem;
-        margin-bottom: 50px;
+        margin-bottom: 80px;
        
     }
 }
