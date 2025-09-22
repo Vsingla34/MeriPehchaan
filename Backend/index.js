@@ -21,8 +21,10 @@ app.use(cors({
 
 import { userRoute } from './routes/user.route.js';
 import {contactRoute}from './routes/contact.route.js'
+import {fetchRolesRoute} from './routes/volunteer&donor.route.js'
 app.use('/meripehchaan/api/v1',userRoute)
 app.use('/meripehchaan/api/v1',contactRoute)
+app.use('/meripehchaan/api/v1',fetchRolesRoute)
 
 
 
