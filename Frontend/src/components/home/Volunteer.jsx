@@ -1,60 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Mail } from "lucide-react";
+import  { useState, useEffect } from "react";
+
 import Header from "../layout/Navbar";
 import Footer from "../layout/Footer";
-
-const programs = [
-  "Education Awareness",
-  "Career Counseling",
-  "Skills Training",
-  "Women Empowerment",
-  "Environmental Protection",
-];
-
-const dummyVolunteers = [
-  {
-    id: 1,
-    name: "Priya Sharma",
-
-    profilePic: "https://placehold.co/150x150/E9D5FF/2D3748?text=PS",
-    program: programs[Math.floor(Math.random() * programs.length)],
-  },
-  {
-    id: 2,
-    name: "Rajesh Kumar",
-
-    profilePic: "https://placehold.co/150x150/BEE3F8/2D3748?text=RK",
-    program: programs[Math.floor(Math.random() * programs.length)],
-  },
-  {
-    id: 3,
-    name: "Anjali Singh",
-
-    profilePic: "https://placehold.co/150x150/A7F3D0/2D3748?text=AS",
-    program: programs[Math.floor(Math.random() * programs.length)],
-  },
-  {
-    id: 4,
-    name: "Siddharth Patel",
-
-    profilePic: "https://placehold.co/150x150/FEE2E2/2D3748?text=SP",
-    program: programs[Math.floor(Math.random() * programs.length)],
-  },
-  {
-    id: 5,
-    name: "Kavita Das",
-
-    profilePic: "https://placehold.co/150x150/FCDDEC/2D3748?text=KD",
-    program: programs[Math.floor(Math.random() * programs.length)],
-  },
-  {
-    id: 6,
-    name: "Vikas Gupta",
-
-    profilePic: "https://placehold.co/150x150/C4B5FD/2D3748?text=VG",
-    program: programs[Math.floor(Math.random() * programs.length)],
-  },
-];
+import { getVolunteers } from "../../services/getRole.service";
 
 const Volunteer = () => {
   const [volunteers, setVolunteers] = useState([]);
@@ -64,7 +12,9 @@ const Volunteer = () => {
   useEffect(() => {
     const fetchVolunteers = async () => {
       try {
-        setVolunteers(dummyVolunteers);
+        const response = await getVolunteers();
+        console.log(response.data)
+        setVolunteers(response.data.data);
         setLoading(false);
       } catch (err) {
         setError(err);
@@ -133,7 +83,7 @@ const Volunteer = () => {
                     />
                   </div>
                   <h2 className="text-xl font-bold text-gray-900 mb-2">
-                    {volunteer.name}
+                    {volunteer.fullname}
                   </h2>
                   <div className="flex flex-col items-center space-y-1 text-gray-500 mb-2">
                     <span className="text-sm font-bold ">
