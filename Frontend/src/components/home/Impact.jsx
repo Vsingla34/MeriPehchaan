@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { TrendingUp, Globe, Heart, Award, Quote } from 'lucide-react';
 import Header from '../layout/Navbar';
-import FacebookPageFeed from "../utils/LiveFbPage.jsx";
-
 
 
 const useAnimatedCounter = (endValue, duration = 2000) => {
@@ -101,8 +99,8 @@ const Impact = () => {
             Every day, we work to create meaningful change in communities around the world. Here's a glimpse of what we've accomplished together.
           </p>
         </div>
-      <div className="fb-box flex justify-center gap-44 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-24">
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -120,13 +118,6 @@ const Impact = () => {
               </div>
             </div>
           ))}
-        </div>
-        <div>
-           <FacebookPageFeed  
-          pageUrl={`https://www.facebook.com/meripehchaanngo`}
-          
-          />
-        </div>
         </div>
 
         <div className={`transition-all duration-1000 delay-600 ${ isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
