@@ -11,6 +11,7 @@ import Hero from "./Hero.jsx";
 import Impact from "./Impact.jsx";
 import About from "./About.jsx";
 import Programs from "./Programs.jsx";
+import FacebookPageFeed from "../utils/LiveFbPage.jsx";
 
 const AuthContext = createContext(null);
 export const useAuth = () => useContext(AuthContext);
@@ -94,6 +95,7 @@ function MainPage() {
           <About />
           <Programs />
           <Impact />
+         
         </main>
         <SiteFooter />
       </div>
