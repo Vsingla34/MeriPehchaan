@@ -62,7 +62,7 @@ const Team = () => {
       name: "Prabhav Aggarwal",
       profile: "Founder",
       description: "Spearheads program development and impact measurement, ensuring our solutions are innovative, effective, and scalable.",
-      url: "https://i.ibb.co/QvywZdMy/1000034174-removebg-preview.png"
+      url: "https://i.ibb.co/q3LQyxQH/changed-removebg-preview.png"
     },
   ];
 
