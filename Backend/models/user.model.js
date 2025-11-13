@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
     },
     role:{
         type:String,
-        enum:['donor','volunteer'],
+        enum:['donor','volunteer','admin'],
         required:true
     },
     resetPasswordOTP:{

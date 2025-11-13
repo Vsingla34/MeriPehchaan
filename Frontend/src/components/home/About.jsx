@@ -80,23 +80,21 @@ const About = () => {
             }`}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              About <span className="text-emerald-600">{"Meri Pehchaan"}</span>
+              <span className="text-emerald-600">{"Meri Pehchaan NGO"}</span>
+              <h3 className="text-3xl md:text-4xl font-bold mt-5 " > Empowering Underprivileged Children & Youth in India </h3>
             </h2>
 
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Meri Pehchaan is a voluntary organisation
-              working with vulnerable groups of children. Our NGO endeavors to
-              motivate, educate and impart life skills to vulnerable children so
-              that they become self reliant.
+             Meri Pehchaan is a Delhi based voluntary non-profit organization in India working with vulnerable and underprivileged children. Our mission is to educate, empower, and inspire children and youth to become self-reliant, confident, and capable of shaping their own futures.
             </p>
 
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-               Volunteers of our NGO are versatile
-              and from various fields who expertly bring their experience and
-              own unique perspective & work together to create a bright future
-              for Children & Youth. We have taken a blessed initiative to
-              empower the lives of under privileged Children & Youth
+               We focus on child education, life-skills development, and youth empowerment through a range of community programs. Our volunteers come from diverse fields — education, healthcare, social work, and corporate sectors — bringing unique perspectives and professional expertise to support our initiatives.
             </p>
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+               Together, we strive to create equal opportunities for every child, promote education for all, and build a compassionate society.
+            </p>
+            
 
             <div className="grid grid-cols-2 gap-6">
               {values.map((value, index) => (

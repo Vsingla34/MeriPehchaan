@@ -10,7 +10,7 @@ import Contact from './components/home/Contact.jsx'
 import Team from './components/home/Team.jsx'
 import Login from './components/auth/Login.jsx'
 import Signup from './components/auth/Signup.jsx'
-
+import Blog from './components/home/Blog.jsx'
 import Donation from './components/utils/Donation.jsx'
 import DetailedAbout from './components/utils/DetailedAbout.jsx'
 import { Toaster } from 'react-hot-toast'
@@ -22,6 +22,11 @@ import Thankyou from './components/utils/Thankyou.jsx'
 import Volunteer from './components/home/Volunteer.jsx'
 import Donor from './components/home/Donor.jsx'
 import SignUpOtpVerification from './components/auth/signUp/SignUpConfirmatin.jsx'
+import BlogOverview from './components/home/BlogOverview.jsx'
+
+// --- NEW IMPORTS ---
+import AdminRoute from './components/auth/AdminRoute.jsx'
+import CreateBlog from './components/admin/CreateBlog.jsx'
 
 
 const routes = createBrowserRouter([
@@ -98,7 +103,26 @@ const routes = createBrowserRouter([
     path: '/ch-new-otp',
     element: <SignUpOtpVerification/>
   },
+  {
+    path: '/blogs',
+    element: <Blog/> // This is the main blog list page
+  },
+  {
+    path: '/blog/:slug', // This is the single blog post page
+    element: <BlogOverview/>
+  },
   
+  // --- NEW ADMIN ROUTE ---
+  {
+    element: <AdminRoute />, // This component protects its children
+    children: [
+      {
+        path: '/admin/create-blog',
+        element: <CreateBlog />
+      }
+      // You can add more admin routes here later, e.g., /admin/dashboard
+    ]
+  }
 
 ])
 
