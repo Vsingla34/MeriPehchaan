@@ -9,6 +9,10 @@ const userRoute = express.Router()
 //------------------CREATING THE NEW USER------------------------------->
 userRoute.post('/user/n-otp',genNewUserOtp)
 userRoute.post('/user/signup',verifyNewUserOtpAndSignIn)
+userRoute.get('/user/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 
 //-----------------END OF CREATING NEW USER VIA OTP VERIFICATION------------->
 userRoute.post('/user/login',loginUser)
