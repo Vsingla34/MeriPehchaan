@@ -12,7 +12,7 @@ userRoute.post('/user/signup',verifyNewUserOtpAndSignIn)
 userRoute.get('/user/health', (req, res) => {
   res.status(200).send('OK');
 });
-
+    
 
 //-----------------END OF CREATING NEW USER VIA OTP VERIFICATION------------->
 userRoute.post('/user/login',loginUser)

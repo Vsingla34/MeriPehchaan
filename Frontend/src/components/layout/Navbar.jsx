@@ -250,6 +250,22 @@ const Header = () => {
               </NavLink>
             ))}
 
+            <div>
+              <button
+                onClick={() => setIsTeamDropdownOpen(!isTeamDropdownOpen)}
+                className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 transition-colors duration-300 flex justify-between items-center"
+              >
+                Team
+              </button>
+              <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isTeamDropdownOpen ? "max-h-40 opacity-100 mt-1" : "max-h-0 opacity-0"}`}>
+                <div className="pl-4 space-y-1 border-l-2 border-gray-100 ml-4">
+                  <NavLink to="/team" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${isActive ? "text-emerald-600 bg-emerald-50" : "text-gray-500 hover:text-emerald-600 hover:bg-gray-50"}`}>Core Members</NavLink>
+                  <NavLink to="/volunteer" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${isActive ? "text-emerald-600 bg-emerald-50" : "text-gray-500 hover:text-emerald-600 hover:bg-gray-50"}`}>Volunteers</NavLink>
+                  <NavLink to="/donor" onClick={() => setIsMenuOpen(false)} className={({ isActive }) => `block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${isActive ? "text-emerald-600 bg-emerald-50" : "text-gray-500 hover:text-emerald-600 hover:bg-gray-50"}`}>Donors</NavLink>
+                </div>
+              </div>
+            </div>
+
             <div className="border-t pt-3 mt-3">
               {user ? (
                 <div className="space-y-2">
